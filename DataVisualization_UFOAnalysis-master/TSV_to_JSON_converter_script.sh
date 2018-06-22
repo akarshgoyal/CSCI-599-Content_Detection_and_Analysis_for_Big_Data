@@ -1,0 +1,1 @@
+tsvtojson --tsv=final.tsv --json=output_json.json --cols=col_headers.txt --object=None --threshold=0.2 --encoding=encoding.txt

@@ -1,0 +1,7 @@
+The following bash scripts were used to make Rest calls to docker tensorflow server:
+
+For object recognition-
+﻿for i in *; do echo -e "\"$i\":`curl -X POST "localhost:8764/inception/v4/classify/image?topn=5&min_confidence=0.015&human=true" --data-binary @"$i"`,"  >> b.json; done
+
+For image captioning-
+for i in *; do echo -e "\"$i\":`curl -X POST "localhost:8764/inception/v3/caption/image" --data-binary @"$i"`,"  >> captions.json; done
